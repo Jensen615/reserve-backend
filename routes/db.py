@@ -51,29 +51,29 @@ class Reservations():
     room_id = db.Column(db.Integer, db.ForeignKey("rooms.id"))
 
 
-def __init__(self, **kwargs):
-    self.user = kwargs.get("user")
-    self.time = kwargs.get("time")
-    self.date = kwargs.get("date")
-    self.room_id = kwargs.get("room_id")
+    def __init__(self, **kwargs):
+        self.user = kwargs.get("user")
+        self.time = kwargs.get("time")
+        self.date = kwargs.get("date")
+        self.room_id = kwargs.get("room_id")
 
-def serialize(self):
-    return{
-        "id": self.id,
-        "user": self.user,
-        "time": self.time,
-        "date": self.date,
-    }
+    def serialize(self):
+        return{
+            "id": self.id,
+            "user": self.user,
+            "time": self.time,
+            "date": self.date,
+        }
 
-def sub_serialize(self):
-    room = Rooms.query.filer_by(id=self.course_id).first()
-    return{
-        "id": self.id,
-        "user": self.user,
-        "time": self.time,
-        "date": self.date,
-        "room": room.serialize(),
-    }
+    def sub_serialize(self):
+        room = Rooms.query.filer_by(id=self.course_id).first()
+        return{
+            "id": self.id,
+            "user": self.user,
+            "time": self.time,
+            "date": self.date,
+            "room": room.serialize(),
+        }
 
-    
+        
 
