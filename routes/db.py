@@ -53,9 +53,9 @@ class Reservations():
 
 def __init__(self, **kwargs):
     self.user = kwargs.get("user")
-    self.room_id = kwargs.get("room_id")
     self.time = kwargs.get("time")
     self.date = kwargs.get("date")
+    self.room_id = kwargs.get("room_id")
 
 def serialize(self):
     return{
