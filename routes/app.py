@@ -52,15 +52,15 @@ def create_room():
     features = body.get("features", False)
     capacity = body.get("capacity")
     image = body.get("image")
-    day_of_week = body.get("dow")
+    day_of_week = body.get("day_of_week")
 
     if not (location and room_name and hall):
         return failure_response("Missing location or room name or hall name!", 400)
     if not capacity:
         return failure_response("Missing capacity field!", 400)
 
-    new_room = Rooms(location, room_name, hall, dates, times,
-                     features, capacity, image, day_of_week)
+    new_room = Rooms(location=location, room_name=room_name, hall=hall, dates=dates, times=times,
+                     features=features, capacity=capacity, image=image, day_of_week=day_of_week)
     db.session.add(new_room)
     db.session.commit()
     return success_response(new_room.serialize(), 201)
@@ -80,22 +80,23 @@ def get_rsvp_by_id(rsvp_id):
     return success_response(rsvp.serialize())
 
 
-@app.route("/reservations/<int:room_id>", methods=["POST"])
+@app.route("/reservations/<int:room_id>/", methods=["POST"])
 def create_rsvp(room_id):
     room = Rooms.query.filter_by(id=room_id).first()
     if room is None:
         return failure_response("Room not found!")
-    body = json.laods(request.data)
-    user_id = body.get("user")
+    body = json.loads(request.data)
+    user = body.get("user")
     time = body.get("time")
     date = body.get("date")
 
-    if not user_id:
+    if not user:
         return failure_response("Missing user field!", 400)
     if not (time and date):
         return failure_response("Missing time or date field!", 400)
 
-    new_rsvp = Reservations(user_id, time, date, room_id)
+    new_rsvp = Reservations(user=user, room_id=room_id, time=time,
+                            date=date)
     db.session.add(new_rsvp)
     db.session.commit()
     return success_response(new_rsvp.sub_serialize(), 201)
