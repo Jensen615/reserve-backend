@@ -68,7 +68,7 @@ def create_room():
 
 @app.route("/rooms/<int:room_id>/", methods=["DELETE"])
 def delete_room(room_id):
-    room = Reservations.query.filter_by(id=room_id).first()
+    room = Rooms.query.filter_by(id=room_id).first()
     if room is None:
         return failure_response("Reservation not found!")
     db.session.delete(room)
