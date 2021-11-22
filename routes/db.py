@@ -17,8 +17,6 @@ class Rooms(db.Model):
 
 
     def __init__(self, **kwargs):
-        self.code = kwargs.get("code")
-        self.name = kwargs.get("name")
         self.location = kwargs.get("location")
         self.room_name = kwargs.get("room_name")
         self.hall = kwargs.get("hall")
@@ -30,11 +28,52 @@ class Rooms(db.Model):
         self.day_of_week = kwargs.get("day_of_week")
     
 
+    def serialize(self):
+        return{
+        "id": self.id,
+        "location": self.location,
+        "room_name": self.room_name,
+        "hall": self.hall,
+        "dates": self.dates,
+        "times": self.times,
+        "features": self.features,
+        "capacity": self.capacity,
+        "image": self.image,
+        "day_of_week": self.day_of_week,
+        }
+
+class Reservations():
+    __tablename__ = "reservations"
+    id = db.Column(db.Integer, primary_key=True)
+    user = db.Column(db.Integer, nullable=False)
+    time = db.Column(db.Integer, nullable=False)
+    date = db.Column(db.String, nullable=False)
+    room_id = db.Column(db.Integer, db.ForeignKey("rooms.id"))
+
+
+def __init__(self, **kwargs):
+    self.user = kwargs.get("user")
+    self.room_id = kwargs.get("room_id")
+    self.time = kwargs.get("time")
+    self.date = kwargs.get("date")
+
+def serialize(self):
+    return{
+        "id": self.id,
+        "user": self.user,
+        "time": self.time,
+        "date": self.date,
+    }
+
+def sub_serialize(self):
+    room = Rooms.query.filer_by(id=self.course_id).first()
+    return{
+        "id": self.id,
+        "user": self.user,
+        "time": self.time,
+        "date": self.date,
+        "room": room.serialize(),
+    }
+
     
-
-
-    
-
-
-
 
