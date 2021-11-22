@@ -75,7 +75,6 @@ def delete_room(room_id):
     return success_response(room.serialize())
 
 
-
 @app.route("/reservations/")
 def get_rsvps():
     rsvps = [r.serialize() for r in Reservations.query.all()]
