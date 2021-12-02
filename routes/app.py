@@ -47,20 +47,19 @@ def create_room():
     location = body.get("location")
     room_name = body.get("room_name")
     hall = body.get("hall")
-    dates = body.get("dates")
-    times = body.get("times")
+    # times = body.get("times")
     features = body.get("features", False)
     capacity = body.get("capacity")
     image = body.get("image")
-    day_of_week = body.get("day_of_week")
+    # day_of_week = body.get("day_of_week")
 
     if not (location and room_name and hall):
         return failure_response("Missing location or room name or hall name!", 400)
     if not capacity:
         return failure_response("Missing capacity field!", 400)
 
-    new_room = Rooms(location=location, room_name=room_name, hall=hall, dates=dates, times=times,
-                     features=features, capacity=capacity, image=image, day_of_week=day_of_week)
+    new_room = Rooms(location=location, room_name=room_name,
+                     hall=hall, features=features, capacity=capacity, image=image)
     db.session.add(new_room)
     db.session.commit()
     return success_response(new_room.serialize(), 201)
