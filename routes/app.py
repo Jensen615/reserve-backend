@@ -35,7 +35,7 @@ def get_rooms():
 
 @app.route("/rooms/<int:room_id>/")
 def get_room_by_id(room_id):
-    room = Rooms.query.filter_by(id=id).first()
+    room = Rooms.query.filter_by(id=room_id).first()
     if room is None:
         return failure_response("Room not found!")
     return success_response(room.serialize())
@@ -83,7 +83,7 @@ def get_rsvps():
 
 @app.route("/reservations/<int:rsvp_id>/")
 def get_rsvp_by_id(rsvp_id):
-    rsvp = Reservations.query.filter_by(id=id).first()
+    rsvp = Reservations.query.filter_by(id=rsvp_id).first()
     if rsvp is None:
         return failure_response("Reservation not found!")
     return success_response(rsvp.serialize())
@@ -113,7 +113,7 @@ def create_rsvp(room_id):
 
 @app.route("/reservations/<int:rsvp_id>/", methods=["DELETE"])
 def delete_rsvp(rsvp_id):
-    rsvp = Reservations.query.filter_by(id=id).first()
+    rsvp = Reservations.query.filter_by(id=rsvp_id).first()
     if rsvp is None:
         return failure_response("Reservation not found!")
     db.session.delete(rsvp)

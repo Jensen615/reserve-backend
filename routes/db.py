@@ -14,6 +14,7 @@ class Rooms(db.Model):
     capacity = db.Column(db.Integer, nullable=False)
     image = db.Column(db.String, nullable=True)
     # day_of_week = db.Column(db.String, nullable=False)
+    # reservations = db.relationship("reservations", cascade="delete")
 
     def __init__(self, **kwargs):
         self.location = kwargs.get("location")
@@ -39,13 +40,13 @@ class Rooms(db.Model):
         }
 
 
-class Reservations():
+class Reservations(db.Model):
     __tablename__ = "reservations"
     id = db.Column(db.Integer, primary_key=True)
     user = db.Column(db.Integer, nullable=False)
     room_id = db.Column(db.Integer, db.ForeignKey("rooms.id"))
     time = db.Column(db.Integer, nullable=False)
-    date = db.Column(db.Date, nullable=False)
+    date = db.Column(db.String, nullable=False)
 
     def __init__(self, **kwargs):
         self.user = kwargs.get("user")
@@ -62,7 +63,7 @@ class Reservations():
         }
 
     def sub_serialize(self):
-        room = Rooms.query.filer_by(id=self.room_id).first()
+        room = Rooms.query.filter_by(id=self.room_id).first()
         return{
             "id": self.id,
             "user": self.user,
@@ -99,7 +100,7 @@ class Times(db.Model):
     t22 = db.Column(db.Boolean, nullable=False)
     t23 = db.Column(db.Boolean, nullable=False)
     t24 = db.Column(db.Boolean, nullable=False)
-    date = db.Column(db.Date, nullable=False)
+    date = db.Column(db.String, nullable=False)
     room_id = db.Column(db.Integer, db.ForeignKey("rooms.id"))
 
     def __init__(self, **kwargs):
