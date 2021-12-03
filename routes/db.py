@@ -45,6 +45,7 @@ class Reservations(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user = db.Column(db.Integer, nullable=False)
     room_id = db.Column(db.Integer, db.ForeignKey("rooms.id"))
+    ##### As of 10:00pm 12/02, time and date have CRUD functions that are connected to Times db######
     time = db.Column(db.Integer, nullable=False)
     date = db.Column(db.String, nullable=False)
 
