@@ -8,6 +8,8 @@ from db import Rooms
 from db import Reservations
 from db import Times
 
+import os
+
 app = Flask(__name__)
 db_filename = "reserve.db"
 
@@ -26,6 +28,11 @@ def success_response(data, code=200):
 
 def failure_response(data, code=404):
     return json.dumps({"error": data}), code
+
+
+@app.route("/")
+def welcome():
+    return "Welcome to Reserve Backend!"
 
 
 @app.route("/rooms/")
@@ -632,10 +639,14 @@ def create_time_row():
     if not (date):
         return failure_response("Missing date field!", 400)
 
-    new_times = Times(date=date, room_id=room_id)
-    db.session.add(new_times)
+    time_row = Times.query.filter_by(
+        room_id=room_id, date=date).first()
+    if time_row is not None:
+        return failure_response("Time row already exists!")
+    new_time_row = Times(date=date, room_id=room_id)
+    db.session.add(new_time_row)
     db.session.commit()
-    return success_response(new_times.serialize(), 201)
+    return success_response(new_time_row.serialize(), 201)
 
 
 @app.route("/times/<int:time_id>/", methods=["POST"])
@@ -687,4 +698,5 @@ def delete_time_row(time_id):
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    port = os.environ.get('PORT', 5000)
+    app.run(host="0.0.0.0", port=port)
