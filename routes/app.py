@@ -35,6 +35,11 @@ def welcome():
     return "Welcome to Reserve Backend!"
 
 
+@app.route("/<string:val>")
+def welcome1(val):
+    return "Welcome to Reserve Backend!" + val
+
+
 @app.route("/rooms/")
 def get_rooms():
     rooms = [r.serialize() for r in Rooms.query.all()]
@@ -95,7 +100,7 @@ def update_room(room_id):
 def delete_room(room_id):
     room = Rooms.query.filter_by(id=room_id).first()
     if room is None:
-        return failure_response("Reservation not found!")
+        return failure_response("Room not found!")
     db.session.delete(room)
     db.session.commit()
     return success_response(room.serialize())

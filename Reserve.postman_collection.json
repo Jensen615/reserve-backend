@@ -1,0 +1,1076 @@
+{
+	"info": {
+		"_postman_id": "e020b5fe-812a-4d7a-b580-da05a7fdc316",
+		"name": "Reserve",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "endpoints",
+			"item": [
+				{
+					"name": "Get Rooms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Room by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/1/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"Central\",\n    \"room_name\": \"UPS212\",\n    \"hall\": \"Upson\",\n    \"features\": true,\n    \"capacity\": 36,\n    \"image\": \"anything\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room HLS320",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"Central - EN\",\n    \"room_name\": \"HLS320\",\n    \"hall\": \"Hollister Hall\",\n    \"features\": true,\n    \"capacity\": 40,\n    \"image\": \"https://25live.collegenet.com/25live/data/cornell/run/image?image_id=251&width=768&caller=S25ImageDao.getUrl-pro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room OLH255",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"Central - EN\",\n    \"room_name\": \"OLH255\",\n    \"hall\": \"Olin Hall\",\n    \"features\": true,\n    \"capacity\": 206,\n    \"image\": \"https://25live.collegenet.com/25live/data/cornell/run/image?image_id=430&width=768&caller=S25ImageDao.getUrl-pro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room PHL307",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"Central - EN\",\n    \"room_name\": \"PHL307\",\n    \"hall\": \"Phillips Hall\",\n    \"features\": true,\n    \"capacity\": 40,\n    \"image\": \"https://25live.collegenet.com/25live/data/cornell/run/image?image_id=435&width=768&caller=S25ImageDao.getUrl-pro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room GSH283",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"Central - Arts\",\n    \"room_name\": \"GSH283\",\n    \"hall\": \"Goldwin Smith Hall\",\n    \"features\": true,\n    \"capacity\": 20,\n    \"image\": \"https://25live.collegenet.com/25live/data/cornell/run/image?image_id=215&width=768&caller=S25ImageDao.getUrl-pro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room LNC107",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"Central - Arts\",\n    \"room_name\": \"LNC107\",\n    \"hall\": \"Lincoln Hall\",\n    \"features\": true,\n    \"capacity\": 30,\n    \"image\": \"https://25live.collegenet.com/25live/data/cornell/run/image?image_id=331&width=768&caller=S25ImageDao.getUrl-pro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room MRL107",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"Central - Arts\",\n    \"room_name\": \"MRL107\",\n    \"hall\": \"Morrill Hall\",\n    \"features\": true,\n    \"capacity\": 45,\n    \"image\": \"https://25live.collegenet.com/25live/data/cornell/run/image?image_id=410&width=768&caller=S25ImageDao.getUrl-pro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room RCK115",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"Central - Arts\",\n    \"room_name\": \"RCK115\",\n    \"hall\": \"Rockefeller Hall\",\n    \"features\": true,\n    \"capacity\": 75,\n    \"image\": \"https://25live.collegenet.com/25live/data/cornell/run/image?image_id=456&width=768&caller=S25ImageDao.getUrl-pro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room KND213",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"Central - Ag\",\n    \"room_name\": \"KND213\",\n    \"hall\": \"Kennedy Hall\",\n    \"features\": true,\n    \"capacity\": 48,\n    \"image\": \"https://25live.collegenet.com/25live/data/cornell/run/image?image_id=311&width=768&caller=S25ImageDao.getUrl-pro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room PLS404",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"Central - Ag\",\n    \"room_name\": \"PLS404\",\n    \"hall\": \"Plant Science\",\n    \"features\": true,\n    \"capacity\": 99,\n    \"image\": \"https://25live.collegenet.com/25live/data/cornell/run/image?image_id=447&width=768&caller=S25ImageDao.getUrl-pro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room AKW101",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"North\",\n    \"room_name\": \"AKW101\",\n    \"hall\": \"American Indian Prog\",\n    \"features\": true,\n    \"capacity\": 43,\n    \"image\": \"https://25live.collegenet.com/25live/data/cornell/run/image?image_id=15&width=768&caller=S25ImageDao.getUrl-pro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room RSLB12",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"North\",\n    \"room_name\": \"RSLB12\",\n    \"hall\": \"Risley Hall\",\n    \"features\": true,\n    \"capacity\": 81,\n    \"image\": \"https://localist-images.azureedge.net/photos/16658/original/efa205a2be4e54d349ad0c83ac32ae9eaeb66ce5.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room APP310",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"North\",\n    \"room_name\": \" APP310\",\n    \"hall\": \"Appel Commons\",\n    \"features\": true,\n    \"capacity\": 120,\n    \"image\": \"https://resizer.otstatic.com/v2/photos/wide-huge/3/31800313.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room LSP101",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"East\",\n    \"room_name\": \" LSP101\",\n    \"hall\": \"Livestock Pavillion\",\n    \"features\": true,\n    \"capacity\": 300,\n    \"image\": \"https://25live.collegenet.com/25live/data/cornell/run/image?image_id=366&width=768&caller=S25ImageDao.getUrl-pro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room WLL249",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"East\",\n    \"room_name\": \"WLL249\",\n    \"hall\": \"Weill Hall\",\n    \"features\": true,\n    \"capacity\": 20,\n    \"image\": \"https://localist-images.azureedge.net/photos/16658/original/efa205a2be4e54d349ad0c83ac32ae9eaeb66ce5.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room WLL349",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"East\",\n    \"room_name\": \"WLL349\",\n    \"hall\": \"Weill Hall\",\n    \"features\": true,\n    \"capacity\": 20,\n    \"image\": \"https://localist-images.azureedge.net/photos/16658/original/efa205a2be4e54d349ad0c83ac32ae9eaeb66ce5.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room STKXCOM",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"East\",\n    \"room_name\": \"STKXCOM\",\n    \"hall\": \"Stocking Hall\",\n    \"features\": true,\n    \"capacity\": 99,\n    \"image\": \"https://48f0801dlj3w44vtk3j7bbtm-wpengine.netdna-ssl.com/wp-content/uploads/2018/11/2015JG12.501.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room BET240",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"West\",\n    \"room_name\": \"BET240\",\n    \"hall\": \"Hans Bethe House\",\n    \"features\": true,\n    \"capacity\": 49,\n    \"image\": \"https://25live.collegenet.com/25live/data/cornell/run/image?image_id=81&width=768&caller=S25ImageDao.getUrl-pro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room BKR120",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"West\",\n    \"room_name\": \"BKR120\",\n    \"hall\": \"Carl Becker House\",\n    \"features\": true,\n    \"capacity\": 12,\n    \"image\": \"https://25live.collegenet.com/25live/data/cornell/run/image?image_id=93&width=768&caller=S25ImageDao.getUrl-pro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room BKR108",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"West\",\n    \"room_name\": \"BKR108\",\n    \"hall\": \"Carl Becker House\",\n    \"features\": false,\n    \"capacity\": 2,\n    \"image\": \"https://dallaslibrary.librarymarket.com/sites/default/files/styles/large/public/content/rooms/images/bdwstudyroom1photo.jpg?itok=_6iKGTjJ\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room FRH110",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"West\",\n    \"room_name\": \"FRH110\",\n    \"hall\": \"Flora Rose House\",\n    \"features\": false,\n    \"capacity\": 3,\n    \"image\": \"https://dallaslibrary.librarymarket.com/sites/default/files/styles/large/public/content/rooms/images/bdwstudyroom1photo.jpg?itok=_6iKGTjJ\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room KTN141",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\": \"West\",\n    \"room_name\": \"KTN141\",\n    \"hall\": \"William T Keeton House\",\n    \"features\": true,\n    \"capacity\": 49,\n    \"image\": \"https://25live.collegenet.com/25live/data/cornell/run/image?image_id=324&width=768&caller=S25ImageDao.getUrl-pro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Room",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"features\": false,\n    \"capacity\": 41\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/1/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Room",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/rooms/1/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get RSVPs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/reservations/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"reservations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get RSVP by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/reservations/3/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"reservations",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create RSVP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"room_id\": 2,\n    \"user\": 1,\n    \"time\": 1,\n    \"date\": \"12-10-2021\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/reservations/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"reservations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update RSVP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": 2,\n    \"time\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/reservations/4/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"reservations",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete RSVP",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/reservations/4/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"reservations",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Times",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/times/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"times",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Time Row by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/times/1/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"times",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Is Time Booked",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/times/2/12-10-2021/1/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"times",
+								"2",
+								"12-10-2021",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Time Row for HLS320",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"room_id\": 1,\n    \"date\": \"12/04/21\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/times/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"times",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Time Row for OLH255",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"room_id\": 2,\n    \"date\": \"12/04/21\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/times/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"times",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Time Row",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"t23\": false,\n    \"t24\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/times/14/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"times",
+								"14",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Time Row",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://reserve-backend.herokuapp.com/times/15/",
+							"protocol": "https",
+							"host": [
+								"reserve-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"times",
+								"15",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
